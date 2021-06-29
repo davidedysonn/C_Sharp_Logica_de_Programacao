@@ -1,0 +1,50 @@
+using System;
+
+namespace TesteDevMedia
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double numero1;
+            double numero2;
+            double soma;
+            string operacao;
+
+            Console.WriteLine("Digite o primeiro numero: \n");
+            numero1 = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite a Operação: \n");
+            operacao = Console.ReadLine();
+
+
+            Console.WriteLine("Digite o segundo numero: \n");
+            numero2 = double.Parse(Console.ReadLine());
+
+            soma = 0.0;
+/*
+ A estrutura de repetição chamada "SWITCH" é otima e viavel para se trabalhar com 
+uma unica variavel e quando se está ciente da quantidade de situação que será realizada.
+(numero de casos que vc fará).
+ */               
+            switch (operacao) { 
+                case "+": soma = numero1 + numero2;
+                    break;
+
+                case "-": soma = numero1 - numero2;
+                    break;
+
+                case "*": soma = numero1 * numero2;
+                    break;
+
+                case "/": soma = numero1 / numero2;
+                    break;
+           }
+
+
+            Console.WriteLine("A resposta desejada é: "+ soma);
+            Console.ReadLine();
+
+        }
+    }
+}
